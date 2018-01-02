@@ -11,13 +11,14 @@ import UIKit
 open class HLLTitleView: UIView {
     
     /// 文本
-    var label = UILabel()
+   public var label = UILabel()
     //标记视图
-    var markView = UIView()
+   public var markView = UIView()
     
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(label)
