@@ -13,7 +13,7 @@ public class HLLScrollView: UIView{
     //默认值40.0
     var titleViewHeight: CGFloat = 40.0
     
-    weak var dataSource: HLLScrollViewDataSource? {
+   public weak var dataSource: HLLScrollViewDataSource? {
         didSet{
             
             //scrollTitleView = HLLScrollTitleView(frame:.zero, titles: dataSource?.scrollTitles(for: self))
@@ -34,7 +34,7 @@ public class HLLScrollView: UIView{
             
         }
     }
-    weak var delegate: HLLScrollViewDelegate? {
+   public weak var delegate: HLLScrollViewDelegate? {
         didSet{
             scrollTitleView.delegate = delegate
             scrollContentView.delegate = delegate
@@ -45,9 +45,9 @@ public class HLLScrollView: UIView{
 //    var titleView:HLLScrollTitleView {get{
 //        return scrollTitleView
 //        }}
-   lazy var scrollTitleView = HLLScrollTitleView(frame: .zero)
+  public lazy var scrollTitleView = HLLScrollTitleView(frame: .zero)
     /// 内容视图
-    lazy var scrollContentView = HLLScrollContentView(frame: .zero)
+   public lazy var scrollContentView = HLLScrollContentView(frame: .zero)
     
 //    private lazy var noDataSourceView: UIView = {
 //        let noView = UIView(frame: bounds)

@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc protocol HLLScrollViewDelegate: NSObjectProtocol{
+@objc public protocol HLLScrollViewDelegate: NSObjectProtocol{
     
     /// title被点击
     ///

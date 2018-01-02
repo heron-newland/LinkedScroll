@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIApplication {
-    static func getStatusBarHeight() -> CGFloat {
+   public static func getStatusBarHeight() -> CGFloat {
         if UIApplication.shared.isStatusBarHidden {
             return 0
         }

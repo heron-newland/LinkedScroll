@@ -8,13 +8,14 @@
 
 import UIKit
 
-class HLLTitleView: UIView {
+open class HLLTitleView: UIView {
     
     /// 文本
     var label = UILabel()
     //标记视图
     var markView = UIView()
-    required init?(coder aDecoder: NSCoder) {
+    
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     override init(frame: CGRect) {
@@ -22,7 +23,7 @@ class HLLTitleView: UIView {
         addSubview(label)
     }
     
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         label.frame = bounds
     }
@@ -39,7 +40,7 @@ extension HLLTitleView {
 }
 
 extension HLLTitleView: NSCopying {
-    func copy(with zone: NSZone? = nil) -> Any {
+    public func copy(with zone: NSZone? = nil) -> Any {
         
         let copy = HLLTitleView()
         copy.label = label

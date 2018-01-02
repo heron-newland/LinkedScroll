@@ -10,7 +10,7 @@
 
 import UIKit
 
-class HLLScrollContentView: UIView {
+public class HLLScrollContentView: UIView {
     
     /// 对外公布的代理方法
     weak var delegate: HLLScrollViewDelegate?
@@ -81,7 +81,7 @@ class HLLScrollContentView: UIView {
         isScrollTriggerByTap = true
     }
 
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         //设置item大小
         collectionView.frame = bounds
@@ -94,7 +94,7 @@ class HLLScrollContentView: UIView {
         super.init(frame: frame)
          NotificationCenter.default.addObserver(self, selector: #selector(rotate), name: NSNotification.Name.UIApplicationWillChangeStatusBarFrame, object: nil)
     }
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
    
@@ -133,10 +133,10 @@ extension HLLScrollContentView {
 
 // MARK: - collection 数据源和代理
 extension HLLScrollContentView: UICollectionViewDataSource, UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return childViewControllers.count
     }
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: itemReuserId, for: indexPath)
         for subView in cell.contentView.subviews {
             subView.removeFromSuperview()
@@ -156,14 +156,14 @@ extension HLLScrollContentView: UICollectionViewDataSource, UICollectionViewDele
         return cell
     }
     
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+    public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         isScrollTriggerByTap = false
         beginningOffsetX = scrollView.contentOffset.x
         print("\(beginningOffsetX)=====")
         delegate?.contentScrollViewWillBeginDragging?(contentScrollView: scrollView)
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
 
         if isScrollTriggerByTap {
             //currentIndex = Int(scrollView.contentOffset.x / collectionView.bounds.width)
@@ -213,15 +213,15 @@ extension HLLScrollContentView: UICollectionViewDataSource, UICollectionViewDele
         
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
        currentIndex = Int(scrollView.contentOffset.x / collectionView.bounds.width)
         delegate?.contentScrollViewDidEndDecelerating?(contentScrollView: scrollView)
     }
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         delegate?.contentScrollViewDidEndDragging?(contentScrollView: scrollView, willDecelerate: decelerate)
     }
   
-    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+    public func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
         delegate?.contentScrollViewWillBeginDecelerating?(contentScrollView: scrollView)
     }
 }

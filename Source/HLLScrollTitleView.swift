@@ -13,7 +13,7 @@
 
 import UIKit
 
-class HLLScrollTitleView: UIView {
+public class HLLScrollTitleView: UIView {
     
     /// 每个标题View
     var titleView: [HLLTitleView]? {
@@ -125,16 +125,16 @@ class HLLScrollTitleView: UIView {
     //private var lastSelectedLabelIndex: Int = 0
     
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
     }
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
 }
 extension HLLScrollTitleView{
-    convenience init(frame: CGRect, titles: [String]?) {
+    convenience public init(frame: CGRect, titles: [String]?) {
         self.init(frame: frame)
         //assert(titles != nil, "titles数组不能为空")
         if titles != nil {
@@ -154,7 +154,7 @@ extension HLLScrollTitleView {
     }
     
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         autoresizingMask = .flexibleHeight
         
@@ -313,19 +313,19 @@ extension HLLScrollTitleView {
 
 extension HLLScrollTitleView: UIScrollViewDelegate {
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         delegate?.titleScrollViewDidScroll?(titleScrollView: scrollView)
     }
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         delegate?.titleScrollViewDidEndDecelerating?(titleScrollView: scrollView)
     }
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         delegate?.titleScrollViewDidEndDragging?(titleScrollView: scrollView, willDecelerate: decelerate)
     }
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+    public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         delegate?.titleScrollViewWillBeginDragging?(titleScrollView: scrollView)
     }
-    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+    public func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
         delegate?.titleScrollViewWillBeginDecelerating?(titleScrollView: scrollView)
     }
     
