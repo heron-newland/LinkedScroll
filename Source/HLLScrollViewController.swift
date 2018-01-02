@@ -45,12 +45,12 @@ open class HLLScrollViewController: UIViewController, HLLScrollViewDataSource, H
     }
     
     //必需实现的数据源方法, 子类实现
-    func scrollTitles(for scrollView: HLLScrollView?) -> [String] {
+    public func scrollTitles(for scrollView: HLLScrollView?) -> [String] {
         assertionFailure("subClass must implement [scrollContentViewControllers] method")
         return [""]
     }
     
-    func scrollContentViewControllers(for scrollView: HLLScrollView?) -> [UIViewController] {
+    public func scrollContentViewControllers(for scrollView: HLLScrollView?) -> [UIViewController] {
         assertionFailure("subClass must implement [scrollContentViewControllers] method")
         return [UIViewController()]
     }

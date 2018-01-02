@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol HLLScrollViewDataSource:  NSObjectProtocol {
+public protocol HLLScrollViewDataSource:  NSObjectProtocol {
     
     /// 标题视图的数据源,
     ///
@@ -21,8 +21,10 @@ protocol HLLScrollViewDataSource:  NSObjectProtocol {
     /// - Parameter viewController: HLLScrollViewController
     /// - Returns: 内容控制器数组
     func scrollContentViewControllers(for scrollView: HLLScrollView?) -> [UIViewController]
+    
     func scrollContentParentViewController(for scrollView: HLLScrollView?) -> UIViewController?
 }
+
 extension HLLScrollViewDataSource{
     func scrollContentParentViewController(for scrollView: HLLScrollView?) -> UIViewController?{
         return nil
