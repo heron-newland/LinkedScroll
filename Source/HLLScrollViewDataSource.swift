@@ -7,8 +7,7 @@
 //
 
 import UIKit
-
-public protocol HLLScrollViewDataSource:  NSObjectProtocol {
+ protocol HLLScrollViewDataSource:  NSObjectProtocol {
     
     /// 标题视图的数据源,
     ///
