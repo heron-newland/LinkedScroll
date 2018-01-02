@@ -19,11 +19,15 @@ open class HLLTitleView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override init(frame: CGRect) {
+//    override public init(frame: CGRect) {
+//        super.init(frame: frame)
+//
+//    }
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(label)
     }
-    
+
     override open func layoutSubviews() {
         super.layoutSubviews()
         label.frame = bounds
@@ -34,14 +38,14 @@ open class HLLTitleView: UIView {
 
 extension HLLTitleView {
     
-    convenience init() {
+    public convenience init() {
         self.init(frame: .zero)
-        addSubview(label)
+
     }
 }
 
 extension HLLTitleView: NSCopying {
-    public func copy(with zone: NSZone? = nil) -> Any {
+    open func copy(with zone: NSZone? = nil) -> Any {
         
         let copy = HLLTitleView()
         copy.label = label
