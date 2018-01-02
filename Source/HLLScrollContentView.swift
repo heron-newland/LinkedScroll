@@ -16,7 +16,7 @@ public class HLLScrollContentView: UIView {
     weak var delegate: HLLScrollViewDelegate?
 
     /// 是否支持左右滑动切换标签
-    var isPanToSwitchEnable: Bool = true {
+   public var isPanToSwitchEnable: Bool = true {
         didSet{
          
             self.collectionView.isScrollEnabled = isPanToSwitchEnable

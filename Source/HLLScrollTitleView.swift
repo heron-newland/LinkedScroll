@@ -16,26 +16,26 @@ import UIKit
 public class HLLScrollTitleView: UIView {
     
     /// 每个标题View
-    var titleView: [HLLTitleView]? {
+   public var titleView: [HLLTitleView]? {
         didSet{
             congfigureTitle()
         }
     }
     
     /// title的标记是否在点击之后消失
-    var isMarkHiddenByTap = true
+   public var isMarkHiddenByTap = true
     
     /// 带颜色的指示线
-    var lineView = UIView()
+   public var lineView = UIView()
     
-    var backgroudLine = UIView()
+   public var backgroudLine = UIView()
     /// 指示线的高度
-    var lineHeight: CGFloat = 2.0
+   public var lineHeight: CGFloat = 2.0
     /// titleLabel 的间距, 可以随便改
-    var margin: CGFloat = 10.0
-    var backgroundLineHeight: CGFloat = 1.0
+   public var margin: CGFloat = 10.0
+   public var backgroundLineHeight: CGFloat = 1.0
     /// 文字颜色
-    var normalTextColor: UIColor = UIColor.darkGray{
+   public var normalTextColor: UIColor = UIColor.darkGray{
         didSet{
             for (index, titleV) in titleLabels.enumerated() {
                 if index != 0 {
@@ -46,7 +46,7 @@ public class HLLScrollTitleView: UIView {
     }
     
     /// 高亮文字颜色
-    var highlightTextColor: UIColor = UIColor.orange {
+   public var highlightTextColor: UIColor = UIColor.orange {
         didSet{
             titleLabels[0].label.textColor = highlightTextColor
             lineView.backgroundColor = highlightTextColor
@@ -54,7 +54,7 @@ public class HLLScrollTitleView: UIView {
     }
     
     /// 字体和大小
-    var textFont: UIFont = UIFont.systemFont(ofSize: 16, weight: .black) {
+   public var textFont: UIFont = UIFont.systemFont(ofSize: 16, weight: .black) {
         didSet{
             for titleV in titleLabels {
                 titleV.label.font = textFont
@@ -63,14 +63,14 @@ public class HLLScrollTitleView: UIView {
     }
     
     /// 指示线是否隐藏, 默认不隐藏
-    var isIndicatorLineHidden: Bool = false {
+   public var isIndicatorLineHidden: Bool = false {
         didSet{
             self.lineView.isHidden = isIndicatorLineHidden
         }
     }
     
     /// 当前选中的文字变大的比例, 设置为0.0不进行缩放, 默认为0.0
-    var textScaleRate: CGFloat = 0.0 {
+   public var textScaleRate: CGFloat = 0.0 {
         didSet{
             //第一个label设置其transform
             titleLabels[0].transform = CGAffineTransform(scaleX: 1 + self.textScaleRate, y:  1 + self.textScaleRate)
@@ -79,17 +79,17 @@ public class HLLScrollTitleView: UIView {
     }
     
     /// 对外公布的代理方法
-    weak var delegate: HLLScrollViewDelegate?
+   public weak var delegate: HLLScrollViewDelegate?
     
     
     /// 标题数组
-    var titles:[String] = []{
+   public var titles:[String] = []{
         didSet{
             configureUI()
         }
     }
     
-    var rightView: UIView? {
+   public var rightView: UIView? {
         didSet{
             //添加右视图
             guard let right = rightView else { return  }
