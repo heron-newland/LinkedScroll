@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HLLScrollView: UIView{
+public class HLLScrollView: UIView{
 
     //默认值40.0
     var titleViewHeight: CGFloat = 40.0
@@ -67,7 +67,7 @@ class HLLScrollView: UIView{
         self.init(frame: .zero)
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         assert(dataSource != nil, "还没有设置数据源, 请设置数据")
         scrollTitleView.frame = CGRect(x: 0, y: 0, width: bounds.width, height: titleViewHeight)
@@ -75,7 +75,7 @@ class HLLScrollView: UIView{
         //scrollTitleView.frame = CGRect(x: safeAreaInset().left, y: safeAreaInset().top, width: bounds.width - safeAreaInset().left - safeAreaInset().right, height: titleViewHeight)
         //scrollContentView.frame = CGRect(x: safeAreaInset().left, y: scrollTitleView.frame.maxY, width: scrollTitleView.bounds.width, height: bounds.height - scrollTitleView.frame.maxY - safeAreaInset().bottom)
     }
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     

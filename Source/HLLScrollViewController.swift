@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HLLScrollViewController: UIViewController, HLLScrollViewDataSource, HLLScrollViewDelegate {
+public class HLLScrollViewController: UIViewController, HLLScrollViewDataSource, HLLScrollViewDelegate {
 
    private weak var dataSource: HLLScrollViewDataSource?
    private weak var delegate: HLLScrollViewDelegate?
@@ -31,13 +31,13 @@ class HLLScrollViewController: UIViewController, HLLScrollViewDataSource, HLLScr
     return scrollView
     }()
 
-    override func viewDidLayoutSubviews() {
+    override public func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         scrollContainer.frame = CGRect(x: 0, y: self.navigateBarHeight() + UIApplication.getStatusBarHeight(), width: view.bounds.width, height: view.bounds.height - self.navigateBarHeight() - self.tabBarHeight() - UIApplication.getStatusBarHeight())
         
     }
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
        
        
@@ -55,7 +55,7 @@ class HLLScrollViewController: UIViewController, HLLScrollViewDataSource, HLLScr
         return [UIViewController()]
     }
     
-    func scrollContentParentViewController(for scrollView: HLLScrollView?) -> UIViewController? {
+    public func scrollContentParentViewController(for scrollView: HLLScrollView?) -> UIViewController? {
         assertionFailure("subClass must implement [scrollContentParentViewController] method")
         return UIViewController()
     }
