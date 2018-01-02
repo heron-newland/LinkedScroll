@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class HLLScrollViewController: UIViewController, HLLScrollViewDataSource, HLLScrollViewDelegate {
+open class HLLScrollViewController: UIViewController, HLLScrollViewDataSource, HLLScrollViewDelegate {
 
    private weak var dataSource: HLLScrollViewDataSource?
    private weak var delegate: HLLScrollViewDelegate?
@@ -31,13 +31,13 @@ public class HLLScrollViewController: UIViewController, HLLScrollViewDataSource,
     return scrollView
     }()
 
-    override public func viewDidLayoutSubviews() {
+    override open func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         scrollContainer.frame = CGRect(x: 0, y: self.navigateBarHeight() + UIApplication.getStatusBarHeight(), width: view.bounds.width, height: view.bounds.height - self.navigateBarHeight() - self.tabBarHeight() - UIApplication.getStatusBarHeight())
         
     }
     
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
        
        
