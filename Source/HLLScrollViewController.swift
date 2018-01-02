@@ -13,7 +13,7 @@ open class HLLScrollViewController: UIViewController, HLLScrollViewDataSource, H
    private weak var dataSource: HLLScrollViewDataSource?
    private weak var delegate: HLLScrollViewDelegate?
     
-    var titleViewHeight: CGFloat = 40.0{
+   public var titleViewHeight: CGFloat = 40.0{
         didSet{
            scrollContainer.titleViewHeight = titleViewHeight
         }
@@ -45,32 +45,32 @@ open class HLLScrollViewController: UIViewController, HLLScrollViewDataSource, H
     }
     
     //必需实现的数据源方法, 子类实现
-    public func scrollTitles(for scrollView: HLLScrollView?) -> [String] {
+    open func scrollTitles(for scrollView: HLLScrollView?) -> [String] {
         assertionFailure("subClass must implement [scrollContentViewControllers] method")
         return [""]
     }
     
-    public func scrollContentViewControllers(for scrollView: HLLScrollView?) -> [UIViewController] {
+    open func scrollContentViewControllers(for scrollView: HLLScrollView?) -> [UIViewController] {
         assertionFailure("subClass must implement [scrollContentViewControllers] method")
         return [UIViewController()]
     }
     
-    public func scrollContentParentViewController(for scrollView: HLLScrollView?) -> UIViewController? {
+    open func scrollContentParentViewController(for scrollView: HLLScrollView?) -> UIViewController? {
         assertionFailure("subClass must implement [scrollContentParentViewController] method")
         return UIViewController()
     }
     
     //可选协议实现, 交给子类实现
-    func titleScrollViewDidScroll(titleScrollView: UIScrollView) {}
-    func titleScrollViewWillBeginDragging(titleScrollView: UIScrollView) {}
-    func titleScrollViewDidEndDecelerating(titleScrollView: UIScrollView) {}
-    func titleScrollViewWillBeginDecelerating(titleScrollView: UIScrollView) {}
-    func titleScrollViewDidEndDragging(titleScrollView: UIScrollView, willDecelerate decelerate: Bool) {}
-    func contentScrollViewDidScroll(contentScrollView: UIScrollView) {}
-    func contentScrollViewWillBeginDragging(contentScrollView: UIScrollView) {}
-    func contentScrollViewDidEndDecelerating(contentScrollView: UIScrollView) {}
-    func contentScrollViewWillBeginDecelerating(contentScrollView: UIScrollView) {}
-    func contentScrollViewDidEndDragging(contentScrollView: UIScrollView, willDecelerate decelerate: Bool) {}
+   open func titleScrollViewDidScroll(titleScrollView: UIScrollView) {}
+   open func titleScrollViewWillBeginDragging(titleScrollView: UIScrollView) {}
+   open func titleScrollViewDidEndDecelerating(titleScrollView: UIScrollView) {}
+   open func titleScrollViewWillBeginDecelerating(titleScrollView: UIScrollView) {}
+   open func titleScrollViewDidEndDragging(titleScrollView: UIScrollView, willDecelerate decelerate: Bool) {}
+   open func contentScrollViewDidScroll(contentScrollView: UIScrollView) {}
+   open func contentScrollViewWillBeginDragging(contentScrollView: UIScrollView) {}
+   open func contentScrollViewDidEndDecelerating(contentScrollView: UIScrollView) {}
+   open func contentScrollViewWillBeginDecelerating(contentScrollView: UIScrollView) {}
+   open func contentScrollViewDidEndDragging(contentScrollView: UIScrollView, willDecelerate decelerate: Bool) {}
     
 }
 
