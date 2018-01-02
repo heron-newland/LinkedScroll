@@ -11,7 +11,7 @@ import UIKit
 
 extension UIColor {
     
-    static func randomColor() -> UIColor {
+   public static func randomColor() -> UIColor {
         let r = CGFloat(arc4random_uniform(255)) / 255.0
         let g = CGFloat(arc4random_uniform(255)) / 255.0
         let b = CGFloat(arc4random_uniform(255)) / 255.0
@@ -24,13 +24,13 @@ extension UIColor {
     /// - Parameters:
     ///   - hex:
     ///   - alpha: 
-    convenience init(hex: UInt, alpha: CGFloat) {
+   public convenience init(hex: UInt, alpha: CGFloat) {
         self.init(red: CGFloat((hex >> 16) & (0xFF)) / 255.0, green: CGFloat((hex >> 8) & 0xFF) / 255.0, blue: CGFloat(hex & 0xFF) / 255.0, alpha: alpha)
     }
     
     
     /// 获取颜色的RGBA值
-    func getRGB() -> (red:CGFloat, green:CGFloat, blue:CGFloat, alpha:CGFloat ) {
+   public func getRGB() -> (red:CGFloat, green:CGFloat, blue:CGFloat, alpha:CGFloat ) {
         var r: CGFloat = 0
         var g: CGFloat = 0
         var b: CGFloat = 0

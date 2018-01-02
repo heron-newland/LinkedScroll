@@ -12,7 +12,7 @@ extension UIViewController {
 
     
      /// 获取导航栏高度
-     func navigateBarHeight() -> CGFloat {
+    public func navigateBarHeight() -> CGFloat {
         guard let navi = self.navigationController else { return 0 }
         if navi.navigationBar.isHidden {
             return 0
@@ -21,7 +21,7 @@ extension UIViewController {
     }
     
     /// 获取tabbar高度
-    func tabBarHeight() -> CGFloat {
+   public func tabBarHeight() -> CGFloat {
         guard let barVC = self.tabBarController else { return 0 }
         if barVC.tabBar.isHidden {
             return 0
@@ -32,7 +32,7 @@ extension UIViewController {
     /// 安全区域
     ///
     /// - Returns: 
-    func safeAreaInset() -> UIEdgeInsets {
+   public func safeAreaInset() -> UIEdgeInsets {
         if #available(iOS 11.0, *) {
         return view.safeAreaInsets
         }

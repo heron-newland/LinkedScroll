@@ -13,7 +13,7 @@ extension UIView{
     /// 安全区域
     ///
     /// - Returns:
-    func safeAreaInset() -> UIEdgeInsets {
+   public func safeAreaInset() -> UIEdgeInsets {
         if #available(iOS 11.0, *) {
             return safeAreaInsets
         }
