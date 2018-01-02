@@ -1,6 +1,6 @@
 # LinkedScrollView
 
-![](https://github.com/heron-newland/LinkedScroll/blob/master/img/icon.png)
+![](https://github.com/heron-newland/LinkedScroll/blob/master/img/Icon.png)
 ## 中文教程
 LinkedScrollView是一款处理上下联动的使用框架,适配iPhoneX, 并且支持屏幕旋转. 后期会不断增加新的功能.欢迎各位使用者提出建议和意见.
 ### 基本类介绍
