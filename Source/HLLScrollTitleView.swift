@@ -307,7 +307,7 @@ extension HLLScrollTitleView {
             totalWidth += labelWidth
         }
         scrollContainer.contentSize = CGSize(width: totalWidth, height: bounds.height)
-        print(scrollContainer.contentSize.height)
+        
     }
 }
 
@@ -345,7 +345,7 @@ extension HLLScrollTitleView {
             isScrollTriggerByTap = false
             return
         }
-        //print("\(index)==\(toIndex)")
+        
         let fromLabel = titleLabels[index]
         let toLabel = titleLabels[toIndex]
         //label颜色改变

@@ -159,7 +159,7 @@ extension HLLScrollContentView: UICollectionViewDataSource, UICollectionViewDele
     public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         isScrollTriggerByTap = false
         beginningOffsetX = scrollView.contentOffset.x
-        print("\(beginningOffsetX)=====")
+        
         delegate?.contentScrollViewWillBeginDragging?(contentScrollView: scrollView)
     }
     
@@ -171,7 +171,7 @@ extension HLLScrollContentView: UICollectionViewDataSource, UICollectionViewDele
         }
         
         let offSetX: CGFloat = scrollView.contentOffset.x
-        print(offSetX)
+        
         var fromIndex: Int = 0
         var toIndex: Int = 0
         let scrollDelta = scrollView.bounds.width
@@ -206,7 +206,7 @@ extension HLLScrollContentView: UICollectionViewDataSource, UICollectionViewDele
            
         }
 
-        print("\(fromIndex)===\(toIndex)===\(progress)")
+        
         _inner_delegate?.scrollContentView(contentView: self, scroll: fromIndex, toIndex: toIndex, progress: progress)
 
       delegate?.contentScrollViewDidScroll?(contentScrollView: scrollView)
