@@ -128,6 +128,16 @@ LinkedScrollView是一款处理上下联动的使用框架,适配iPhoneX, 并且
     	
     	//根据需要实现代理方法, 实现方式见方式一
     	
+####刷新数据源
+
+方式一刷新数据源的方法:
+
+	reloadData()
+	
+方式二刷新数据源的方法:
+
+	scrollView.reloadData()
+    	
 ### 使用技巧
 通过改变属性值可以自定义自己想要的样式, 具体属性如下:
 *	HLLScrollView属性
