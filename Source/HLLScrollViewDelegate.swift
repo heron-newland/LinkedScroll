@@ -17,20 +17,40 @@ import UIKit
     ///   - titleLabel: 被点击的label
     ///   - tappedIndex: 被点击label的下标
     @objc optional func titleScrollView(titleScrollView: UIScrollView, titleLabel: HLLTitleView, tappedIndex: Int)
-   
     
+    /// title滑动
     @objc optional func titleScrollViewDidScroll(titleScrollView: UIScrollView)
     
-  
-    @objc optional  func titleScrollViewDidEndDecelerating(titleScrollView: UIScrollView)
-    @objc optional  func titleScrollViewDidEndDragging(titleScrollView: UIScrollView, willDecelerate decelerate: Bool)
-    @objc optional  func titleScrollViewWillBeginDragging(titleScrollView: UIScrollView)
+    ///title即将结束滑动
     @objc optional  func titleScrollViewWillBeginDecelerating(titleScrollView: UIScrollView)
     
+    ///title结束滑动
+    @objc optional  func titleScrollViewDidEndDecelerating(titleScrollView: UIScrollView)
+    
+    ///title停止拖动
+    @objc optional  func titleScrollViewDidEndDragging(titleScrollView: UIScrollView, willDecelerate decelerate: Bool)
+    
+    ///title开始拖动
+    @objc optional  func titleScrollViewWillBeginDragging(titleScrollView: UIScrollView)
+    
+    
     //content
+    ///content滑动
     @objc optional func contentScrollViewDidScroll(contentScrollView: UIScrollView)
-    @objc optional  func contentScrollViewDidEndDecelerating(contentScrollView: UIScrollView)
-    @objc optional  func contentScrollViewDidEndDragging(contentScrollView: UIScrollView, willDecelerate decelerate: Bool)
-    @objc optional  func contentScrollViewWillBeginDragging(contentScrollView: UIScrollView)
+    
+    ///content即将结束滑动
     @objc optional  func contentScrollViewWillBeginDecelerating(contentScrollView: UIScrollView)
+    
+    ///content结束滑动
+    @objc optional  func contentScrollViewDidEndDecelerating(contentScrollView: UIScrollView)
+    
+    ///content停止拖动
+    @objc optional  func contentScrollViewDidEndDragging(contentScrollView: UIScrollView, willDecelerate decelerate: Bool)
+    
+    ///content开始拖动
+    @objc optional  func contentScrollViewWillBeginDragging(contentScrollView: UIScrollView)
+    
+    
+    
+//    @objc optional func loadMoreData(contentScrollView: HLLScrollContentView)
 }

@@ -40,7 +40,7 @@ class TitleView: HLLTitleView {
         //不要使用, 这个center是相对于父视图中心坐标,我们要找的点是相对于本视图的中心点坐标
        // label.center = center
         label.center = CGPoint(x: bounds.width * 0.5, y: bounds.height * 0.5)
-        markView.frame = CGRect(x: label.frame.maxX, y: label.frame.minY, width: 10, height: 10)
+        markView.frame = CGRect(x: label.frame.maxX - 10, y: label.frame.minY, width: 10, height: 10)
     }
     
     override func copy(with zone: NSZone? = nil) -> Any {

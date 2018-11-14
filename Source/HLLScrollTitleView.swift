@@ -16,26 +16,22 @@ import UIKit
 public class HLLScrollTitleView: UIView {
     
     /// 每个标题View
-   public var titleView: [HLLTitleView]? {
-        didSet{
-            congfigureTitle()
-        }
-    }
+    public var titleView: [HLLTitleView]? 
     
     /// title的标记是否在点击之后消失
-   public var isMarkHiddenByTap = true
+    public var isMarkHiddenByTap = true
     
     /// 带颜色的指示线
-   public var lineView = UIView()
+    public var lineView = UIView()
     
-   public var backgroudLine = UIView()
+    public var backgroudLine = UIView()
     /// 指示线的高度
-   public var lineHeight: CGFloat = 2.0
+    public var lineHeight: CGFloat = 2.0
     /// titleLabel 的间距, 可以随便改
-   public var margin: CGFloat = 10.0
-   public var backgroundLineHeight: CGFloat = 1.0
+    public var margin: CGFloat = 10.0
+    public var backgroundLineHeight: CGFloat = 1.0
     /// 文字颜色
-   public var normalTextColor: UIColor = UIColor.darkGray{
+    public var normalTextColor: UIColor = UIColor.darkGray{
         didSet{
             for (index, titleV) in titleLabels.enumerated() {
                 if index != 0 {
@@ -46,15 +42,17 @@ public class HLLScrollTitleView: UIView {
     }
     
     /// 高亮文字颜色
-   public var highlightTextColor: UIColor = UIColor.orange {
+    public var highlightTextColor: UIColor = UIColor.orange {
         didSet{
-            titleLabels[0].label.textColor = highlightTextColor
-            lineView.backgroundColor = highlightTextColor
+            if titleLabels.count > 0 {
+                titleLabels[0].label.textColor = highlightTextColor
+                lineView.backgroundColor = highlightTextColor
+            }
         }
     }
     
     /// 字体和大小
-   public var textFont: UIFont = UIFont.systemFont(ofSize: 16, weight: .black) {
+    public var textFont: UIFont = UIFont.systemFont(ofSize: 16, weight: .black) {
         didSet{
             for titleV in titleLabels {
                 titleV.label.font = textFont
@@ -63,14 +61,14 @@ public class HLLScrollTitleView: UIView {
     }
     
     /// 指示线是否隐藏, 默认不隐藏
-   public var isIndicatorLineHidden: Bool = false {
+    public var isIndicatorLineHidden: Bool = false {
         didSet{
             self.lineView.isHidden = isIndicatorLineHidden
         }
     }
     
     /// 当前选中的文字变大的比例, 设置为0.0不进行缩放, 默认为0.0
-   public var textScaleRate: CGFloat = 0.0 {
+    public var textScaleRate: CGFloat = 0.0 {
         didSet{
             //第一个label设置其transform
             titleLabels[0].transform = CGAffineTransform(scaleX: 1 + self.textScaleRate, y:  1 + self.textScaleRate)
@@ -79,17 +77,22 @@ public class HLLScrollTitleView: UIView {
     }
     
     /// 对外公布的代理方法
-   public weak var delegate: HLLScrollViewDelegate?
+    public weak var delegate: HLLScrollViewDelegate?
     
     
     /// 标题数组
-   public var titles:[String] = []{
+    public var titles:[String] = []{
         didSet{
-            configureUI()
+            if titles.count > 0 {
+                self.currentIndex = 0
+                configureUI()
+            }
         }
+        
+       
     }
     
-   public var rightView: UIView? {
+    public var rightView: UIView? {
         didSet{
             //添加右视图
             guard let right = rightView else { return  }
@@ -108,7 +111,8 @@ public class HLLScrollTitleView: UIView {
     }()
     
     /// 标题label数组
-    var titleLabels = [HLLTitleView]()
+  private  var titleLabels = [HLLTitleView]()
+    
     
     /// 当前选中的label的下标
     private var currentIndex: Int = 0
@@ -151,13 +155,17 @@ extension HLLScrollTitleView {
         addSubview(scrollContainer)
         congfigureTitle()
         configureLine()
+        layoutSubviews()
     }
     
     
     override public func layoutSubviews() {
         super.layoutSubviews()
-        autoresizingMask = .flexibleHeight
         
+        autoresizingMask = .flexibleHeight
+        if self.titleLabels.count == 0 {
+            return
+        }
         //设置scrollContainer的frame
         if rightView != nil {
             scrollContainer.frame =  CGRect(x: 0, y: frame.origin.y, width: frame.size.width - rightView!.bounds.width, height: frame.size.height)
@@ -187,9 +195,7 @@ extension HLLScrollTitleView {
             var titleV: HLLTitleView
             if titleView == nil {
                 titleV = HLLTitleView()
-                
             }else{
-                
                 titleV = titleView![index]
             }
             scrollContainer.addSubview(titleV)
@@ -217,7 +223,7 @@ extension HLLScrollTitleView {
     @objc func labelTapped(sender: UITapGestureRecognizer){
         
         let currentSelectedLabel = sender.view as! HLLTitleView
-
+        
         hiddenMark(at: currentSelectedLabel.tag)
         scroll(to: currentSelectedLabel.tag)
         
@@ -240,7 +246,11 @@ extension HLLScrollTitleView {
     /// 让选中的title居中显示,针对scrollContainer居中
     /// - Parameter index: 起始labe的index
     private func setScrollContainerOffset(by index: Int) {
-        if scrollContainer.contentSize.width <= bounds.width {
+        var rightViewWidth: CGFloat = 0.0
+        if let rightView = rightView {
+            rightViewWidth = rightView.bounds.width
+        }
+        if scrollContainer.contentSize.width <= bounds.width - rightViewWidth {
             return
         }
         var scrollX: CGFloat = 0
@@ -286,8 +296,6 @@ extension HLLScrollTitleView {
         for title in titles {
             //计算title文字宽度
             titleStr = title as NSString
-            
-            
             titleSize = (titleStr?.boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: textFont.lineHeight), options: .usesFontLeading, attributes: [.font : newFont], context: nil).size)!
             tempTotalWidth += (titleSize.width + originMargin)
         }
@@ -339,7 +347,7 @@ extension HLLScrollTitleView {
     ///   - index: 起始下标
     ///   - toIndex: 目的下标
     ///   - progress: 进度
-   open func scroll(from index: Int, toIndex: Int, progress: CGFloat) {
+    open func scroll(from index: Int, toIndex: Int, progress: CGFloat) {
         
         if isScrollTriggerByTap {//如果是点击title的动作不掉用此方法
             isScrollTriggerByTap = false
@@ -379,7 +387,7 @@ extension HLLScrollTitleView {
                 fromLabel.transform = .identity
             })
         }
-
+        
         //记录当前选中的label
         //处理连续滑动造成index混乱
         if progress == 0.0 {
@@ -398,7 +406,9 @@ extension HLLScrollTitleView {
     
     /// 滚动到对应的位置
     ///
-   open func scroll(to index: Int) {
+    open func scroll(to index: Int) {
+        
+        assert(index <= titleLabels.count, "the index you want to scroll to is out of bounds")
         let currentSelectedLabel = titleLabels[index]
         if currentIndex == index {
             return
@@ -427,6 +437,11 @@ extension HLLScrollTitleView {
         
         delegate?.titleScrollView?(titleScrollView: scrollContainer, titleLabel: currentSelectedLabel, tappedIndex: currentIndex)
     }
-   
     
+    
+    open func reloadData(){
+        //        self.currentIndex = 0;
+        //        setScrollContainerOffset(by: 0)
+        //        configureUI()
+    }
 }

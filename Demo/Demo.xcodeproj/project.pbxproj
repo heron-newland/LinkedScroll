@@ -12,24 +12,28 @@
 		5B97D9971FFB2CC100FF906D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B97D9951FFB2CC100FF906D /* Main.storyboard */; };
 		5B97D9991FFB2CC100FF906D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B97D9981FFB2CC100FF906D /* Assets.xcassets */; };
 		5B97D99C1FFB2CC100FF906D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B97D99A1FFB2CC100FF906D /* LaunchScreen.storyboard */; };
-		5B97D9B01FFB2CE800FF906D /* HLLScrollContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97D9A41FFB2CE800FF906D /* HLLScrollContentView.swift */; };
-		5B97D9B11FFB2CE800FF906D /* HLLScrollTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97D9A51FFB2CE800FF906D /* HLLScrollTitleView.swift */; };
-		5B97D9B21FFB2CE800FF906D /* HLLScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97D9A61FFB2CE800FF906D /* HLLScrollView.swift */; };
-		5B97D9B31FFB2CE800FF906D /* HLLScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97D9A71FFB2CE800FF906D /* HLLScrollViewController.swift */; };
-		5B97D9B41FFB2CE800FF906D /* HLLScrollViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97D9A81FFB2CE800FF906D /* HLLScrollViewControllerDelegate.swift */; };
-		5B97D9B51FFB2CE800FF906D /* HLLScrollViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97D9A91FFB2CE800FF906D /* HLLScrollViewDataSource.swift */; };
-		5B97D9B61FFB2CE800FF906D /* HLLScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97D9AA1FFB2CE800FF906D /* HLLScrollViewDelegate.swift */; };
-		5B97D9B71FFB2CE800FF906D /* HLLTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97D9AB1FFB2CE800FF906D /* HLLTitleView.swift */; };
-		5B97D9B81FFB2CE800FF906D /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97D9AC1FFB2CE800FF906D /* UIApplicationExtension.swift */; };
-		5B97D9B91FFB2CE800FF906D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97D9AD1FFB2CE800FF906D /* UIColorExtension.swift */; };
-		5B97D9BA1FFB2CE800FF906D /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97D9AE1FFB2CE800FF906D /* UIViewControllerExtension.swift */; };
-		5B97D9BB1FFB2CE800FF906D /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97D9AF1FFB2CE800FF906D /* UIViewExtension.swift */; };
 		5B97D9BE1FFB2E3100FF906D /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97D9BC1FFB2E3100FF906D /* NewsViewController.swift */; };
 		5B97D9BF1FFB2E3100FF906D /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97D9BD1FFB2E3100FF906D /* TitleView.swift */; };
 		5B97D9C11FFB2F6500FF906D /* HLLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97D9C01FFB2F6500FF906D /* HLLViewController.swift */; };
+		5B9C66CB21996ED600DA2737 /* HLLTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9C66CA21996ED600DA2737 /* HLLTableView.swift */; };
+		5B9C66CD2199745F00DA2737 /* HLLCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9C66CC2199745F00DA2737 /* HLLCollectionView.swift */; };
+		5BD07D86219585190086494F /* HLLScrollContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD07D7A219585180086494F /* HLLScrollContentView.swift */; };
+		5BD07D87219585190086494F /* HLLScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD07D7B219585180086494F /* HLLScrollViewDelegate.swift */; };
+		5BD07D88219585190086494F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD07D7C219585180086494F /* UIViewExtension.swift */; };
+		5BD07D89219585190086494F /* HLLScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD07D7D219585180086494F /* HLLScrollView.swift */; };
+		5BD07D8A219585190086494F /* HLLScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD07D7E219585180086494F /* HLLScrollViewController.swift */; };
+		5BD07D8B219585190086494F /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD07D7F219585180086494F /* UIViewControllerExtension.swift */; };
+		5BD07D8C219585190086494F /* HLLScrollTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD07D80219585180086494F /* HLLScrollTitleView.swift */; };
+		5BD07D8D219585190086494F /* HLLScrollViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD07D81219585180086494F /* HLLScrollViewControllerDelegate.swift */; };
+		5BD07D8E219585190086494F /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD07D82219585190086494F /* UIColorExtension.swift */; };
+		5BD07D8F219585190086494F /* HLLTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD07D83219585190086494F /* HLLTitleView.swift */; };
+		5BD07D90219585190086494F /* HLLScrollViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD07D84219585190086494F /* HLLScrollViewDataSource.swift */; };
+		5BD07D91219585190086494F /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD07D85219585190086494F /* UIApplicationExtension.swift */; };
+		6E38B6DB225B6F38F2320F06 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A44EADA7E3C53DBEFB885FB /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A44EADA7E3C53DBEFB885FB /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B97D98E1FFB2CC100FF906D /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B97D9911FFB2CC100FF906D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B97D9931FFB2CC100FF906D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,21 +41,25 @@
 		5B97D9981FFB2CC100FF906D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B97D99B1FFB2CC100FF906D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B97D99D1FFB2CC100FF906D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B97D9A41FFB2CE800FF906D /* HLLScrollContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLLScrollContentView.swift; sourceTree = "<group>"; };
-		5B97D9A51FFB2CE800FF906D /* HLLScrollTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLLScrollTitleView.swift; sourceTree = "<group>"; };
-		5B97D9A61FFB2CE800FF906D /* HLLScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLLScrollView.swift; sourceTree = "<group>"; };
-		5B97D9A71FFB2CE800FF906D /* HLLScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLLScrollViewController.swift; sourceTree = "<group>"; };
-		5B97D9A81FFB2CE800FF906D /* HLLScrollViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLLScrollViewControllerDelegate.swift; sourceTree = "<group>"; };
-		5B97D9A91FFB2CE800FF906D /* HLLScrollViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLLScrollViewDataSource.swift; sourceTree = "<group>"; };
-		5B97D9AA1FFB2CE800FF906D /* HLLScrollViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLLScrollViewDelegate.swift; sourceTree = "<group>"; };
-		5B97D9AB1FFB2CE800FF906D /* HLLTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLLTitleView.swift; sourceTree = "<group>"; };
-		5B97D9AC1FFB2CE800FF906D /* UIApplicationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
-		5B97D9AD1FFB2CE800FF906D /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
-		5B97D9AE1FFB2CE800FF906D /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
-		5B97D9AF1FFB2CE800FF906D /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		5B97D9BC1FFB2E3100FF906D /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		5B97D9BD1FFB2E3100FF906D /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		5B97D9C01FFB2F6500FF906D /* HLLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLLViewController.swift; sourceTree = "<group>"; };
+		5B9C66CA21996ED600DA2737 /* HLLTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLLTableView.swift; sourceTree = "<group>"; };
+		5B9C66CC2199745F00DA2737 /* HLLCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLLCollectionView.swift; sourceTree = "<group>"; };
+		5BD07D7A219585180086494F /* HLLScrollContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLLScrollContentView.swift; sourceTree = "<group>"; };
+		5BD07D7B219585180086494F /* HLLScrollViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLLScrollViewDelegate.swift; sourceTree = "<group>"; };
+		5BD07D7C219585180086494F /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		5BD07D7D219585180086494F /* HLLScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLLScrollView.swift; sourceTree = "<group>"; };
+		5BD07D7E219585180086494F /* HLLScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLLScrollViewController.swift; sourceTree = "<group>"; };
+		5BD07D7F219585180086494F /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		5BD07D80219585180086494F /* HLLScrollTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLLScrollTitleView.swift; sourceTree = "<group>"; };
+		5BD07D81219585180086494F /* HLLScrollViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLLScrollViewControllerDelegate.swift; sourceTree = "<group>"; };
+		5BD07D82219585190086494F /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		5BD07D83219585190086494F /* HLLTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLLTitleView.swift; sourceTree = "<group>"; };
+		5BD07D84219585190086494F /* HLLScrollViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLLScrollViewDataSource.swift; sourceTree = "<group>"; };
+		5BD07D85219585190086494F /* UIApplicationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		832DF9BF60CE34E8B693501C /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		B74DC3553B23F8B7501B79FC /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,17 +67,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E38B6DB225B6F38F2320F06 /* Pods_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5AF1CEBE09209D9601DEADA1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B74DC3553B23F8B7501B79FC /* Pods-Demo.debug.xcconfig */,
+				832DF9BF60CE34E8B693501C /* Pods-Demo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5B97D9851FFB2CC100FF906D = {
 			isa = PBXGroup;
 			children = (
 				5B97D9901FFB2CC100FF906D /* Demo */,
 				5B97D98F1FFB2CC100FF906D /* Products */,
+				5AF1CEBE09209D9601DEADA1 /* Pods */,
+				81C6D9C492D11027E23BC2C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +104,7 @@
 		5B97D9901FFB2CC100FF906D /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				5B9C66CE2199757000DA2737 /* Utils */,
 				5B97D9A31FFB2CE800FF906D /* Source */,
 				5B97D9911FFB2CC100FF906D /* AppDelegate.swift */,
 				5B97D9931FFB2CC100FF906D /* ViewController.swift */,
@@ -101,21 +122,38 @@
 		5B97D9A31FFB2CE800FF906D /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				5B97D9A41FFB2CE800FF906D /* HLLScrollContentView.swift */,
-				5B97D9A51FFB2CE800FF906D /* HLLScrollTitleView.swift */,
-				5B97D9A61FFB2CE800FF906D /* HLLScrollView.swift */,
-				5B97D9A71FFB2CE800FF906D /* HLLScrollViewController.swift */,
-				5B97D9A81FFB2CE800FF906D /* HLLScrollViewControllerDelegate.swift */,
-				5B97D9A91FFB2CE800FF906D /* HLLScrollViewDataSource.swift */,
-				5B97D9AA1FFB2CE800FF906D /* HLLScrollViewDelegate.swift */,
-				5B97D9AB1FFB2CE800FF906D /* HLLTitleView.swift */,
-				5B97D9AC1FFB2CE800FF906D /* UIApplicationExtension.swift */,
-				5B97D9AD1FFB2CE800FF906D /* UIColorExtension.swift */,
-				5B97D9AE1FFB2CE800FF906D /* UIViewControllerExtension.swift */,
-				5B97D9AF1FFB2CE800FF906D /* UIViewExtension.swift */,
+				5BD07D7A219585180086494F /* HLLScrollContentView.swift */,
+				5BD07D80219585180086494F /* HLLScrollTitleView.swift */,
+				5BD07D7D219585180086494F /* HLLScrollView.swift */,
+				5BD07D7E219585180086494F /* HLLScrollViewController.swift */,
+				5BD07D81219585180086494F /* HLLScrollViewControllerDelegate.swift */,
+				5BD07D84219585190086494F /* HLLScrollViewDataSource.swift */,
+				5BD07D7B219585180086494F /* HLLScrollViewDelegate.swift */,
+				5BD07D83219585190086494F /* HLLTitleView.swift */,
+				5BD07D85219585190086494F /* UIApplicationExtension.swift */,
+				5BD07D82219585190086494F /* UIColorExtension.swift */,
+				5BD07D7F219585180086494F /* UIViewControllerExtension.swift */,
+				5BD07D7C219585180086494F /* UIViewExtension.swift */,
 			);
 			name = Source;
 			path = ../../Source;
+			sourceTree = "<group>";
+		};
+		5B9C66CE2199757000DA2737 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5B9C66CA21996ED600DA2737 /* HLLTableView.swift */,
+				5B9C66CC2199745F00DA2737 /* HLLCollectionView.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		81C6D9C492D11027E23BC2C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A44EADA7E3C53DBEFB885FB /* Pods_Demo.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +163,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B97D9A01FFB2CC100FF906D /* Build configuration list for PBXNativeTarget "Demo" */;
 			buildPhases = (
+				E84C1B606E6BAA84DB66644A /* [CP] Check Pods Manifest.lock */,
 				5B97D98A1FFB2CC100FF906D /* Sources */,
 				5B97D98B1FFB2CC100FF906D /* Frameworks */,
 				5B97D98C1FFB2CC100FF906D /* Resources */,
+				286AFDD147BE3D57E1104D7C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,28 +225,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		286AFDD147BE3D57E1104D7C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Demo/Pods-Demo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Demo/Pods-Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E84C1B606E6BAA84DB66644A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5B97D98A1FFB2CC100FF906D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B97D9B41FFB2CE800FF906D /* HLLScrollViewControllerDelegate.swift in Sources */,
-				5B97D9B31FFB2CE800FF906D /* HLLScrollViewController.swift in Sources */,
-				5B97D9B01FFB2CE800FF906D /* HLLScrollContentView.swift in Sources */,
+				5BD07D86219585190086494F /* HLLScrollContentView.swift in Sources */,
+				5BD07D8E219585190086494F /* UIColorExtension.swift in Sources */,
 				5B97D9BE1FFB2E3100FF906D /* NewsViewController.swift in Sources */,
+				5BD07D8F219585190086494F /* HLLTitleView.swift in Sources */,
 				5B97D9941FFB2CC100FF906D /* ViewController.swift in Sources */,
-				5B97D9BB1FFB2CE800FF906D /* UIViewExtension.swift in Sources */,
-				5B97D9B61FFB2CE800FF906D /* HLLScrollViewDelegate.swift in Sources */,
+				5BD07D8C219585190086494F /* HLLScrollTitleView.swift in Sources */,
+				5BD07D89219585190086494F /* HLLScrollView.swift in Sources */,
 				5B97D9BF1FFB2E3100FF906D /* TitleView.swift in Sources */,
+				5BD07D8D219585190086494F /* HLLScrollViewControllerDelegate.swift in Sources */,
 				5B97D9921FFB2CC100FF906D /* AppDelegate.swift in Sources */,
-				5B97D9B81FFB2CE800FF906D /* UIApplicationExtension.swift in Sources */,
-				5B97D9B51FFB2CE800FF906D /* HLLScrollViewDataSource.swift in Sources */,
+				5BD07D87219585190086494F /* HLLScrollViewDelegate.swift in Sources */,
+				5B9C66CD2199745F00DA2737 /* HLLCollectionView.swift in Sources */,
+				5BD07D88219585190086494F /* UIViewExtension.swift in Sources */,
+				5BD07D91219585190086494F /* UIApplicationExtension.swift in Sources */,
+				5BD07D8A219585190086494F /* HLLScrollViewController.swift in Sources */,
+				5BD07D90219585190086494F /* HLLScrollViewDataSource.swift in Sources */,
+				5BD07D8B219585190086494F /* UIViewControllerExtension.swift in Sources */,
+				5B9C66CB21996ED600DA2737 /* HLLTableView.swift in Sources */,
 				5B97D9C11FFB2F6500FF906D /* HLLViewController.swift in Sources */,
-				5B97D9B11FFB2CE800FF906D /* HLLScrollTitleView.swift in Sources */,
-				5B97D9BA1FFB2CE800FF906D /* UIViewControllerExtension.swift in Sources */,
-				5B97D9B71FFB2CE800FF906D /* HLLTitleView.swift in Sources */,
-				5B97D9B21FFB2CE800FF906D /* HLLScrollView.swift in Sources */,
-				5B97D9B91FFB2CE800FF906D /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,11 +422,14 @@
 		};
 		5B97D9A11FFB2CC100FF906D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B74DC3553B23F8B7501B79FC /* Pods-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = NetWorking/HLLNetWorking/Configure/HLLNetConsistance.swift;
 				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.heron.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -356,11 +440,14 @@
 		};
 		5B97D9A21FFB2CC100FF906D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 832DF9BF60CE34E8B693501C /* Pods-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = NetWorking/HLLNetWorking/Configure/HLLNetConsistance.swift;
 				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.heron.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

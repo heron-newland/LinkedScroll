@@ -10,13 +10,14 @@ import UIKit
 
 public class HLLScrollView: UIView{
 
-    //默认值40.0
+    //title的高度, 默认值40.0
     var titleViewHeight: CGFloat = 40.0
     
    public weak var dataSource: HLLScrollViewDataSource? {
         didSet{
             
             //scrollTitleView = HLLScrollTitleView(frame:.zero, titles: dataSource?.scrollTitles(for: self))
+            scrollTitleView.titleView = dataSource?.scrollTitleViews?(for: self)
             scrollTitleView.titles = (dataSource?.scrollTitles(for: self))!
             //设置代理
             scrollTitleView._inner_delegate = self
@@ -29,8 +30,9 @@ public class HLLScrollView: UIView{
             
             //设置代理
             scrollContentView._inner_delegate = self
+            
             //iOS11一下设置这句话
-             dataSource?.scrollContentParentViewController(for: self)?.automaticallyAdjustsScrollViewInsets = false
+//             dataSource?.scrollContentParentViewController(for: self)?.automaticallyAdjustsScrollViewInsets = false
             
         }
     }
@@ -105,5 +107,19 @@ extension HLLScrollView {
         scrollTitleView.scroll(to: index)
     }
     
+  open  func reloadData() -> Void {
+    //重新设置数据源
+    //title
+    scrollTitleView.titleView = dataSource?.scrollTitleViews?(for: self)
+    scrollTitleView.titles = dataSource!.scrollTitles(for: self)
+//    scrollTitleView.reloadData()
+    //content
+    scrollContentView.childViewControllers = dataSource!.scrollContentViewControllers(for: self)
+    scrollContentView.parentViewController = dataSource!.scrollContentParentViewController(for: self)
+    scrollContentView.reloadData()
+    
+    //滚动到开始
+    scroll(to: 0)
+    }
     
 }

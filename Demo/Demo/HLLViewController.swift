@@ -10,7 +10,11 @@ import UIKit
 
 class HLLViewController: HLLScrollViewController {
 
+    
+    var data = ["新闻房产", "体育", "房产财经", "房产", "动漫房产", "动漫","新闻房产", "体育"]
+    var titles = [String]()
     override func viewDidLoad() {
+        titles = data
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -22,9 +26,21 @@ class HLLViewController: HLLScrollViewController {
     }
     
     override func scrollTitles(for scrollView: HLLScrollView?) -> [String] {
-        return ["新闻房产", "体育", "房产财经", "房产", "动漫房产", "动漫","新闻房产", "体育",]
+        return titles
     }
     
+    @IBAction func refreshData(_ sender: Any) {
+        let i = arc4random_uniform(UInt32(data.count))
+        if i == 0 {
+            return
+        }
+        var refreshedTitles = [String]()
+        for j in 0..<Int(i) {
+         refreshedTitles.append(data[j])
+        }
+        titles = refreshedTitles
+        reloadData()
+    }
     /// 内容数据源
     ///
     /// - Parameter scrollView:
@@ -32,7 +48,7 @@ class HLLViewController: HLLScrollViewController {
     override func scrollContentViewControllers(for scrollView: HLLScrollView?) -> [UIViewController] {
         var controllers = [UIViewController]()
         //这里简单用for循环创建控制器, 具体控制器根据实际情况创建
-        for _ in 0 ..< 8 {
+        for _ in 0 ..< titles.count {
             controllers.append(NewsViewController())
         }
         return controllers

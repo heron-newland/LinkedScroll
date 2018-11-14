@@ -16,11 +16,20 @@ class NewsViewController: UIViewController {
     let bigItemId = "bigItemId"
     let sectionHeaderId = "sectionHeaderId"
     private lazy var layout = UICollectionViewFlowLayout()
-    private lazy var collectionView: UICollectionView = { [unowned self] in
-        let collection = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
+    private lazy var collectionView: HLLCollectionView = { [unowned self] in
+        let collection = HLLCollectionView(frame: view.bounds, collectionViewLayout: layout)
         collection.dataSource = self
         collection.delegate = self
-        
+        collection.shouldPullRefresh(shouldPullRefresh: true)
+        collection.shouldPullLoadMore(shouldPullLoadMore: true)
+        collection.loadNewData = { sender in
+            sender.mj_header.endRefreshing()
+            sender.reloadData()
+        }
+        //
+//        collection.loadMoreData = { sender in
+//            
+//        }
         collection.backgroundColor = UIColor.white
         //大小item分别注册, 提高效率, 防止重用出现问题
         //注册小item

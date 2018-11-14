@@ -18,9 +18,7 @@ public class HLLScrollContentView: UIView {
     /// 是否支持左右滑动切换标签
    public var isPanToSwitchEnable: Bool = true {
         didSet{
-         
             self.collectionView.isScrollEnabled = isPanToSwitchEnable
-            
         }
     }
     
@@ -28,17 +26,20 @@ public class HLLScrollContentView: UIView {
    private let itemReuserId = "itemReuserId"
     var parentViewController: UIViewController?{
         didSet{
+            if childViewControllers.count > 0 {
             for vc in childViewControllers {
                 if parentViewController != nil {
                     parentViewController!.addChildViewController(vc)
+                }
                 }
             }
         }
     }
      var childViewControllers = [UIViewController](){
         didSet{
-                assert(childViewControllers.count != 0, "viewControllers数组不能为空")
+            if childViewControllers.count > 0 {
                 configureUI()
+            }
     }
     }
     /// 内部使用代理, 处理上下联动逻辑使用的, 如果重写该代理一定要调用super
@@ -69,13 +70,8 @@ public class HLLScrollContentView: UIView {
         collection.bounces = false
        //collection.isPrefetchingEnabled = false
         collection.showsHorizontalScrollIndicator = false
-        
         return collection
     }()
-    
-    
-    
-
     
     @objc func rotate(){
         isScrollTriggerByTap = true
@@ -83,6 +79,9 @@ public class HLLScrollContentView: UIView {
 
     override public func layoutSubviews() {
         super.layoutSubviews()
+        if childViewControllers.count == 0 {
+            return;
+        }
         //设置item大小
         collectionView.frame = bounds
         layout.itemSize = collectionView.bounds.size
@@ -242,5 +241,7 @@ extension HLLScrollContentView {
         collectionView.setContentOffset(CGPoint(x: CGFloat(index) * bounds.width, y: 0), animated: false)
     }
     
-    
+    open func reloadData(){
+        collectionView.reloadData()
+    }
 }

@@ -6,6 +6,7 @@
 //  Copyright © 2017年 com.heron. All rights reserved.
 //
 
+
 import UIKit
 
 open class HLLScrollViewController: UIViewController, HLLScrollViewDataSource, HLLScrollViewDelegate {
@@ -33,7 +34,9 @@ open class HLLScrollViewController: UIViewController, HLLScrollViewDataSource, H
 
     override open func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        scrollContainer.frame = CGRect(x: 0, y: self.navigateBarHeight() + UIApplication.getStatusBarHeight(), width: view.bounds.width, height: view.bounds.height - self.navigateBarHeight() - self.tabBarHeight() - UIApplication.getStatusBarHeight())
+//         scrollContainer.frame = CGRect(x: 0, y: self.navigateBarHeight() + UIApplication.getStatusBarHeight(), width: view.bounds.width, height: view.bounds.height - self.navigateBarHeight() - self.tabBarHeight() - UIApplication.getStatusBarHeight())
+       scrollContainer.frame = CGRect(x: safeAreaInset().left, y:  safeAreaInset().top, width: view.bounds.width - safeAreaInset().left - safeAreaInset().right, height: view.bounds.height - safeAreaInset().top - safeAreaInset().bottom)
+//        scrollContainer.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height - self.tabBarHeight())
         
     }
     
@@ -44,6 +47,16 @@ open class HLLScrollViewController: UIViewController, HLLScrollViewDataSource, H
         view.addSubview(scrollContainer)
     }
     
+    /// 数据刷新
+    open func reloadData(){
+        //重新设置数据源
+        scrollContainer.reloadData()
+//        scrollContainer.scrollTitleView.titles = scrollTitles(for: self.scrollContainer)
+//        scrollContainer.scrollContentView.childViewControllers = scrollContentViewControllers(for: self.scrollContainer)
+//        scrollContainer.scrollContentView.parentViewController = scrollContentParentViewController(for: self.scrollContainer)
+//        //滚动到开始
+//        scrollContainer.scroll(to: 0)
+    }
     //必需实现的数据源方法, 子类实现
     open func scrollTitles(for scrollView: HLLScrollView?) -> [String] {
         assertionFailure("subClass must implement [scrollContentViewControllers] method")
@@ -71,7 +84,7 @@ open class HLLScrollViewController: UIViewController, HLLScrollViewDataSource, H
    open func contentScrollViewDidEndDecelerating(contentScrollView: UIScrollView) {}
    open func contentScrollViewWillBeginDecelerating(contentScrollView: UIScrollView) {}
    open func contentScrollViewDidEndDragging(contentScrollView: UIScrollView, willDecelerate decelerate: Bool) {}
-    
+    public func loadMoreData(contentScrollView: UIScrollView) {}
 }
 
 
